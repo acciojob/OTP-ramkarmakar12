@@ -2,6 +2,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('.code');
 
+    // Set focus to the first input field on page load.
+    if (inputs.length > 0) {
+        inputs[0].focus();
+    }
+
     // Focus handling for forward typing
     inputs.forEach((input, index) => {
         input.addEventListener('input', function() {
@@ -21,4 +26,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
